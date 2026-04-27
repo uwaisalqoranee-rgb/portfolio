@@ -79,10 +79,19 @@
 }
 
 .nav.is-stuck {
-  background-color: rgba(250, 250, 250, 0.82);
-  border-bottom-color: var(--color-rule-soft);
+  background-color: rgba(250, 250, 250, 0.94);
+  border-bottom-color: var(--color-rule);
   backdrop-filter: saturate(180%) blur(18px);
   -webkit-backdrop-filter: saturate(180%) blur(18px);
+}
+
+/* Fallback for browsers without backdrop-filter (older Android, some
+   iOS WebViews). Without blur, translucency reads as broken — so we
+   force the stuck nav fully opaque. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .nav.is-stuck {
+    background-color: var(--color-bg);
+  }
 }
 
 .nav__inner {
