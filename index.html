@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Ahmad Uwais Al Qoranee — Computer &amp; Communications Systems Engineer</title>
+
+  <meta name="description"
+    content="Portfolio of Ahmad Uwais Al Qoranee — Computer &amp; Communications Systems Engineer (UPM), Reserve Officer (PALAPES Darat), and national-level athlete. Applying to Bank Islam's Young Leaders Programme.">
+  <meta name="author" content="Ahmad Uwais Al Qoranee">
+  <meta name="theme-color" content="#fafafa">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Ahmad Uwais Al Qoranee — Portfolio">
+  <meta property="og:description" content="Computer &amp; Communications Systems Engineer. Reserve Officer. Athlete.">
+  <meta property="og:locale"      content="en_MY">
+
+  <!-- Stylesheets, ordered: reset → tokens → layout → sections -->
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/sections.css">
+
+  <!-- Inline favicon: a quiet square mark in the brand navy -->
+  <link rel="icon"
+        href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a2540'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='-apple-system,Helvetica,Arial' font-size='15' font-weight='600' fill='%23fafafa'>AQ</text></svg>">
+</head>
+
+<body>
+
+  <!-- Skip-link for keyboard users -->
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <!-- ============================================================
+       NAVIGATION
+       Fixed, transparent over hero, becomes solid (.is-stuck) once
+       the user scrolls past the threshold (handled in main.js).
+       ============================================================ -->
+  <header class="nav" data-nav>
+    <div class="container container--wide nav__inner">
+
+      <a class="nav__brand" href="#top" aria-label="Ahmad Uwais Al Qoranee — home">
+        <span class="nav__brand-mark" aria-hidden="true"></span>
+        <span>Uwais Al&nbsp;Qoranee</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav__list" role="list">
+          <li><a class="nav__link" href="#profile">Profile</a></li>
+          <li><a class="nav__link" href="#experience">Work</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#service">Service</a></li>
+          <li><a class="nav__link" href="#athletics">Athletics</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="nav__cta" href="assets/uwais-resume.pdf" download>Download résumé</a>
+
+      <button class="nav__toggle"
+              type="button"
+              aria-label="Open menu"
+              aria-controls="nav-drawer"
+              aria-expanded="false"
+              data-nav-toggle>
+        <span class="nav__toggle-icon" aria-hidden="true"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="nav-drawer" data-nav-drawer>
+      <a class="nav__link" href="#profile">Profile</a>
+      <a class="nav__link" href="#experience">Work</a>
+      <a class="nav__link" href="#projects">Projects</a>
+      <a class="nav__link" href="#service">Service</a>
+      <a class="nav__link" href="#athletics">Athletics</a>
+      <a class="nav__link" href="#contact">Contact</a>
+      <a class="nav__cta" href="assets/uwais-resume.pdf" download>Download résumé</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==========================================================
+         HERO
+         A single confident statement, paired with a vertical
+         portrait slot and a four-column meta ledger.
+         ========================================================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container container--wide hero__inner">
+
+        <div class="hero__lead">
+          <span class="eyebrow hero__eyebrow reveal">Portfolio · 2026</span>
+
+          <h1 class="hero__title reveal" id="hero-title">
+            <span class="hero__title-mark">Ahmad</span>
+            Uwais
+            Al&nbsp;Qoranee.
+          </h1>
+
+          <p class="hero__subhead reveal" data-delay="1">
+            Computer &amp; Communications Systems Engineer.
+            Reserve Officer. Athlete.
+          </p>
+
+          <p class="hero__lede reveal" data-delay="2">
+            Bridging engineering precision with leadership discipline —
+            currently pursuing a career in Islamic banking through
+            Bank&nbsp;Islam&rsquo;s Young Leaders Programme.
+          </p>
+
+          <div class="hero__actions reveal" data-delay="3">
+            <a class="button button--primary" href="#profile">
+              Read the profile
+              <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a class="button button--ghost" href="assets/uwais-resume.pdf" download>
+              Download résumé
+              <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Portrait slot: replace data-placeholder file with an actual
+             jpg dropped into /images/. Until then, a labelled neutral
+             panel is rendered via the .figure component. -->
+        <figure class="hero__portrait reveal"
+                data-delay="2"
+                data-parallax
+                data-placeholder="images/hero-portrait.jpeg">
+          <img src="images/hero-portrait.jpeg"
+               alt="Portrait of Ahmad Uwais Al Qoranee"
+               loading="eager"
+               decoding="async"
+               width="800"
+               height="1000">
+        </figure>
+
+      </div>
+
+      <!-- Bottom-of-hero meta ledger -->
+      <div class="container container--wide" aria-hidden="false">
+        <dl class="hero__meta reveal" data-delay="4">
+
+          <div class="hero__meta-item">
+            <dt class="hero__meta-label">Discipline</dt>
+            <dd class="hero__meta-value">Computer &amp; Comms&nbsp;Systems</dd>
+          </div>
+
+          <div class="hero__meta-item">
+            <dt class="hero__meta-label">Institution</dt>
+            <dd class="hero__meta-value">Universiti Putra Malaysia</dd>
+          </div>
+
+          <div class="hero__meta-item">
+            <dt class="hero__meta-label">Commissioned</dt>
+            <dd class="hero__meta-value">Lt. Muda Simpanan, 2025</dd>
+          </div>
+
+          <div class="hero__meta-item">
+            <dt class="hero__meta-label">Based in</dt>
+            <dd class="hero__meta-value">Kuala Lumpur, Malaysia</dd>
+          </div>
+
+        </dl>
+      </div>
+
+      <span class="hero__indicator" aria-hidden="true">
+        <span class="hero__indicator-line"></span>
+        Scroll
+      </span>
+    </section>
+
+
+    <!-- ==========================================================
+         PROFILE
+         Editorial two-column: a serif pull-quote on the left,
+         the substantive paragraph on the right.
+         ========================================================== -->
+    <section class="section section--rule" id="profile" aria-labelledby="profile-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="01">Profile</span>
+          <h2 class="heading heading--xl" id="profile-title">
+            An engineer trained for systems —
+            shaped by service, sport, and study.
+          </h2>
+        </header>
+
+        <div class="profile__columns">
+
+          <aside class="reveal" data-delay="1">
+            <p class="profile__pull">
+              &ldquo;Engineering precision and the discipline of an officer
+              cadet, applied to the work of building things that other
+              people rely on.&rdquo;
+              <span class="profile__pull-source">Personal note · 2026</span>
+            </p>
+          </aside>
+
+          <div class="prose reveal" data-delay="2">
+            <p>
+              <strong>Computer and Communications Systems Engineering</strong>
+              graduate from <strong>Universiti Putra Malaysia (CGPA&nbsp;3.40)</strong>,
+              seeking to build a career in Islamic banking through Bank Islam&rsquo;s
+              Young Leaders Programme. The work I&rsquo;m proudest of has always
+              sat at the intersection of two things: the rigour of an engineer,
+              and the obligations of someone responsible for other people.
+            </p>
+            <p>
+              That intersection runs through a dual-department internship at
+              <strong>Malaysia Airports Holdings Berhad</strong> — split between
+              business intelligence and electrical engineering — and through a
+              final-year project on AI-powered flood early warning that was
+              selected to represent UPM at the
+              <strong>MADANI Festival of Ideas&nbsp;2026</strong> before
+              national ministers, and showcased at the
+              Vice-Chancellor&rsquo;s Annual Address&nbsp;2026.
+            </p>
+            <p>
+              In parallel, I trained for three years as a
+              <strong>PALAPES Darat officer cadet</strong> and was commissioned
+              as <em>Leftenan Muda Simpanan</em>, while competing at national
+              level in dodgeball and rowing. Those experiences taught me
+              something engineering coursework alone cannot: how to make
+              decisions under pressure, with an incomplete picture, while
+              accountable to a team.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         EDUCATION
+         Three-column ledger row: period · institution · CGPA
+         ========================================================== -->
+    <section class="section section--rule" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="02">Education</span>
+          <h2 class="heading heading--lg" id="education-title">
+            Foundations in engineering, finished with a 3.40 CGPA at UPM.
+          </h2>
+        </header>
+
+        <ol class="education__list reveal" data-delay="1">
+
+          <li class="education__item">
+            <span class="education__period">Oct 2022 — Aug 2026</span>
+            <div>
+              <h3 class="education__title">Universiti Putra Malaysia</h3>
+              <p class="education__detail">
+                Bachelor of Engineering (Hons.),
+                Computer and Communications Systems Engineering.
+              </p>
+            </div>
+            <span class="education__cgpa">CGPA 3.40</span>
+          </li>
+
+          <li class="education__item">
+            <span class="education__period">Jan 2021 — Dec 2021</span>
+            <div>
+              <h3 class="education__title">Pusat Asasi, UiTM Kampus Dengkil</h3>
+              <p class="education__detail">
+                Foundation in Engineering.
+              </p>
+            </div>
+            <span class="education__cgpa">CGPA 4.00</span>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         EXPERIENCE — MAHB INTERNSHIP
+         Sticky meta column on the left, two detail blocks on the
+         right (BI/Data Analytics, BHS Engineering).
+         ========================================================== -->
+    <section class="section section--rule" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section__head section__head--split reveal">
+          <span class="kicker kicker--numbered" data-index="03">Experience</span>
+          <h2 class="heading heading--lg" id="experience-title">
+            A dual-department internship at Malaysia Airports —
+            data analytics by morning, electrical engineering by afternoon.
+          </h2>
+        </header>
+
+        <div class="experience">
+
+          <aside class="experience__meta reveal" data-delay="1">
+            <span class="experience__period">Jul 2025 — Sep 2025 · Sepang</span>
+            <h3 class="experience__role">Industrial Trainee, Dual Department</h3>
+            <p class="experience__where">Malaysia Airports Holdings Berhad (MAHB)</p>
+
+            <figure class="figure figure--3-2 experience__media"
+                    data-placeholder="images/mahb-internship.jpeg">
+              <img src="images/mahb-internship.jpeg"
+                   class="figure__image"
+                   alt="Working at MAHB headquarters in Sepang"
+                   loading="lazy"
+                   decoding="async"
+                   width="900"
+                   height="600">
+            </figure>
+          </aside>
+
+          <div class="experience__body">
+
+            <article class="experience__block reveal" data-delay="1">
+              <span class="experience__block-label">Department I</span>
+              <h4 class="experience__block-title">Business Intelligence — Data Analytics</h4>
+              <p class="experience__block-prose">
+                Reduced manual tender verification by
+                <span class="experience__metric">~40%</span>
+                by developing a paperless submission app via Google AppSheet.
+                Streamlined coordination for 50+ engineering staff by
+                redesigning the division&rsquo;s internal website. Consolidated
+                real-time operational data across all
+                <span class="experience__metric">39 MAHB-managed airports</span>
+                nationwide through dashboards built in Google Data Studio.
+              </p>
+            </article>
+
+            <article class="experience__block reveal" data-delay="2">
+              <span class="experience__block-label">Department II</span>
+              <h4 class="experience__block-title">Baggage Handling System Engineering — Electrical</h4>
+              <p class="experience__block-prose">
+                Accelerated fault-trend analysis by
+                <span class="experience__metric">~35%</span>
+                by digitising 100% of scanner and reader machine data into
+                structured reports. Supported PLC programming, motor
+                troubleshooting, and real-time breakdown response across
+                KLIA&rsquo;s four-terminal baggage handling system.
+              </p>
+            </article>
+
+            <div class="experience__stack reveal" data-delay="3">
+              <span class="experience__stack-label">Stack</span>
+              <span class="experience__stack-item">AppSheet</span>
+              <span class="experience__stack-item">Google Data Studio</span>
+              <span class="experience__stack-item">PLC Programming</span>
+              <span class="experience__stack-item">HTML / CSS</span>
+              <span class="experience__stack-item">Google Workspace</span>
+              <span class="experience__stack-item">AppScript</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         PROJECTS — PERSONAL
+         Three-column row: index, title block, body. Editorial.
+         ========================================================== -->
+    <section class="section section--rule" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="04">Personal projects</span>
+          <h2 class="heading heading--lg" id="projects-title">
+            Two engineering projects that taught me how to ship —
+            on real hardware, with real data.
+          </h2>
+        </header>
+
+        <ol class="projects" role="list">
+
+          <li class="project reveal">
+            <span class="project__index">No. 01</span>
+
+            <div>
+              <h3 class="project__title">Self-Hosted MLOps Pipeline on RHEL</h3>
+              <span class="project__year">2026</span>
+            </div>
+
+            <div class="project__body">
+              <ul class="project__list" role="list">
+                <li>
+                  Achieved sub-200&nbsp;ms inference latency and 99% uptime by
+                  architecting an end-to-end MLOps system on Red Hat Enterprise
+                  Linux&nbsp;9 — containerised model serving, CI/CD automation,
+                  production monitoring.
+                </li>
+                <li>
+                  Reduced kernel size by ~15% while maintaining full
+                  functionality by manually compiling and customising the
+                  Linux kernel from upstream source, optimising system
+                  performance for ML workloads.
+                </li>
+              </ul>
+
+              <p class="project__stack">
+                <strong>Stack</strong>
+                RHEL 9 · Python · FastAPI · Podman · GitHub Actions ·
+                PostgreSQL · Nginx · Prometheus · Grafana · AWS
+              </p>
+            </div>
+          </li>
+
+          <li class="project reveal">
+            <span class="project__index">No. 02</span>
+
+            <div>
+              <h3 class="project__title">DID Hydrological Data Visualisation</h3>
+              <span class="project__year">2026</span>
+            </div>
+
+            <div class="project__body">
+              <ul class="project__list" role="list">
+                <li>
+                  Visualised three years of water-level and rainfall data from
+                  <em>Jabatan Pengairan dan Saliran Malaysia</em> (DID) using
+                  Google Data Studio, surfacing seasonal trends and
+                  flood-risk indicators across multiple monitoring stations.
+                </li>
+              </ul>
+
+              <p class="project__stack">
+                <strong>Stack</strong>
+                Google Data Studio · hydrological datasets
+              </p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         COURSEWORK / ACADEMIC PROJECTS
+         A 2-column grid of self-contained capsules.
+         ========================================================== -->
+    <section class="section section--rule" id="coursework" aria-labelledby="coursework-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="05">Coursework</span>
+          <h2 class="heading heading--lg" id="coursework-title">
+            Five academic projects that span hardware,
+            networks, AI, and full SDLC software.
+          </h2>
+        </header>
+
+        <div class="coursework">
+
+          <article class="coursework__item reveal">
+            <span class="coursework__label">Embedded Systems</span>
+            <h3 class="coursework__title">Wi-Fi Robot</h3>
+            <p class="coursework__prose">
+              Built a Wi-Fi-connected autonomous robot using Arduino R4 with
+              a team. Integrated sensors for real-time line detection and
+              obstacle avoidance. Hands-on circuit design, sensor
+              calibration, and embedded firmware development.
+            </p>
+
+            <p class="coursework__stack">
+              <strong>Stack</strong>
+              Arduino R4 · IR sensors · ultrasonic sensors · Wi-Fi module · C++
+            </p>
+          </article>
+
+          <article class="coursework__item reveal" data-delay="1">
+            <span class="coursework__label">Artificial Intelligence</span>
+            <h3 class="coursework__title">Stray Dog Detection System</h3>
+            <p class="coursework__prose">
+              Developed an AI-powered stray-dog detection system using
+              YOLOv8 (latest at time of project). Trained on aggregated
+              datasets from Kaggle, Roboflow, and custom-collected data.
+              Tackled real-world dataset variance, class imbalance, and
+              inference optimisation.
+            </p>
+            <p class="coursework__stack">
+              <strong>Stack</strong>
+              Python · YOLOv8 · OpenCV · PyTorch · Kaggle / Roboflow datasets
+            </p>
+          </article>
+
+          <article class="coursework__item reveal">
+            <span class="coursework__label">IoT Systems</span>
+            <h3 class="coursework__title">Real-time Environmental Monitoring</h3>
+            <p class="coursework__prose">
+              Engineered an end-to-end IoT pipeline integrating sensors
+              deployed by UPM in Kuching with a Node-RED flow on a local AI
+              machine. Streamed live humidity and temperature data via MQTT,
+              then trained an LSTM model for hourly forecasting.
+            </p>
+            <p class="coursework__stack">
+              <strong>Stack</strong>
+              Node-RED · MQTT · Python · LSTM (TensorFlow / Keras) · embedded sensors
+            </p>
+          </article>
+
+          <article class="coursework__item reveal" data-delay="1">
+            <span class="coursework__label">Networking Fundamentals</span>
+            <h3 class="coursework__title">Enterprise Network Lab</h3>
+            <p class="coursework__prose">
+              Coursework covering TCP/IP, OSI model, dynamic and static
+              routing, VLAN configuration, and switching. Hands-on labs
+              simulating enterprise networks on GNS3, configuring
+              multi-router topologies, troubleshooting routing protocols
+              (OSPF, RIP), and VLAN segmentation.
+            </p>
+            <p class="coursework__stack">
+              <strong>Stack</strong>
+              GNS3 · Cisco IOS · Wireshark
+            </p>
+          </article>
+
+          <article class="coursework__item reveal">
+            <span class="coursework__label">Advanced Programming</span>
+            <h3 class="coursework__title">Java Fitness Tracker App</h3>
+            <p class="coursework__prose">
+              Designed and built a fitness-tracking application in Java
+              with a team. Followed full SDLC with UML class and sequence
+              diagrams, modular OOP architecture, and unit testing.
+              Developed and tested in BlueJ.
+            </p>
+            <p class="coursework__stack">
+              <strong>Stack</strong>
+              Java · BlueJ · UML
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         SERVICE — PALAPES (FEATURE) + ROWING CLUB (SECONDARY)
+         Headline feature with prose + 3-image gallery.
+         Below: secondary leadership block.
+         ========================================================== -->
+    <section class="section section--rule" id="service" aria-labelledby="service-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="06">Service &amp; leadership</span>
+          <h2 class="heading heading--lg" id="service-title">
+            Three years training for command. Commissioned in&nbsp;2025.
+          </h2>
+        </header>
+
+        <div class="service">
+
+          <div class="service__feature reveal" data-delay="1">
+            <span class="kicker">Leftenan Muda Simpanan · PALAPES Darat · 2022 — 2025</span>
+            <h3 class="service__feature-title">
+              The highlight of my university journey.
+            </h3>
+            <p class="service__feature-prose">
+              Completed the three-year <em>Pasukan Latihan Pegawai
+              Simpanan</em> officer training programme — a selective
+              Ministry of Defence pathway combining academic studies with
+              tactical, physical, and leadership training.
+            </p>
+            <p class="service__feature-prose">
+              Commissioned in 2025 after passing all officer-cadet
+              assessments, including field exercises, weapons handling,
+              map-reading, and command evaluations. Developed leadership
+              under pressure, disciplined decision-making, logistical
+              planning, and team command — all while maintaining academic
+              standing in a demanding engineering degree.
+            </p>
+          </div>
+
+          <div class="service__gallery reveal" data-delay="2">
+
+            <figure class="figure figure--16-9"
+                    data-placeholder="images/palapes-commissioning.jpeg">
+              <img src="images/palapes-commissioning.jpeg"
+                   class="figure__image"
+                   alt="Commissioning ceremony as Leftenan Muda Simpanan in 2025"
+                   loading="lazy"
+                   decoding="async"
+                   width="1200"
+                   height="675">
+              <figcaption class="figure__caption">
+                Commissioning ceremony, 2025.
+              </figcaption>
+            </figure>
+
+            <figure class="figure figure--3-4"
+                    data-placeholder="images/palapes-training-1.jpeg">
+              <img src="images/palapes-training-1.jpeg"
+                   class="figure__image"
+                   alt="Field exercise during PALAPES Darat training"
+                   loading="lazy"
+                   decoding="async"
+                   width="600"
+                   height="800">
+            </figure>
+
+            <figure class="figure figure--3-4"
+                    data-placeholder="images/palapes-training-2.jpeg">
+              <img src="images/palapes-training-2.jpeg"
+                   class="figure__image"
+                   alt="Weapons handling and tactical training, PALAPES Darat"
+                   loading="lazy"
+                   decoding="async"
+                   width="600"
+                   height="800">
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="service__secondary reveal">
+          <span class="service__secondary-label">President · UPM Rowing Club · 2022 — 2024</span>
+          <h3 class="service__secondary-title">
+            Led the UPM Rowing Club through two academic cycles.
+          </h3>
+          <p class="service__secondary-prose">
+            Oversaw training schedules, competition entries, athlete
+            welfare, and administrative coordination with the UPM Sports
+            Unit. Balanced executive responsibilities with active
+            competition — including the bronze-medal run at the Penang
+            Rowing Indoor Championship.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         ATHLETICS
+         Three-up gallery with achievement cards.
+         ========================================================== -->
+    <section class="section section--rule" id="athletics" aria-labelledby="athletics-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="07">Athletics</span>
+          <h2 class="heading heading--lg" id="athletics-title">
+            National-level discipline, carried into engineering and military training.
+          </h2>
+        </header>
+
+        <div class="athletics">
+
+          <article class="athletics__card athletics__card--featured reveal">
+            <figure class="figure figure--4-3"
+                    data-placeholder="images/sports-dodgeball.jpeg">
+              <img src="images/sports-dodgeball.jpeg"
+                   class="figure__image"
+                   alt="Dodgeball team representing UPM at Putrajaya National Games"
+                   loading="lazy"
+                   decoding="async"
+                   width="800"
+                   height="600">
+            </figure>
+            <h3 class="athletics__title">Gold — Dodgeball, Putrajaya National Games</h3>
+            <p class="athletics__detail">Representing UPM across four consecutive seasons.</p>
+            <span class="athletics__year">2022 — 2025</span>
+          </article>
+
+          <article class="athletics__card athletics__card--text reveal" data-delay="1">
+            <span class="kicker">Open category · individual entry</span>
+            <h3 class="athletics__title">Bronze — Penang Rowing Indoor Championship</h3>
+            <p class="athletics__detail">
+              Earned while serving as President of the UPM Rowing Club —
+              balancing executive responsibilities with active competition
+              against open-category entrants.
+            </p>
+            <span class="athletics__year">2022</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         BEYOND ACADEMIA
+         A short editorial paragraph with a serif drop-cap.
+         ========================================================== -->
+    <section class="section section--snug section--rule" id="beyond" aria-labelledby="beyond-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="08">Beyond academia</span>
+          <h2 class="heading heading--md" id="beyond-title">
+            Volunteering, gig work, and a stint as a gym trainer.
+          </h2>
+        </header>
+
+        <div class="beyond reveal" data-delay="1">
+          <p class="beyond__lede">
+            Engaged in volunteering, part-time work, and gig roles
+            throughout university — including stints as a gym trainer.
+            These experiences sharpened communication, time management,
+            and the ability to work with people from all walks of life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         AWARDS & LANGUAGES (LEDGER)
+         Two-column ledger: awards on the left, languages on the right.
+         ========================================================== -->
+    <section class="section section--rule" id="awards" aria-labelledby="awards-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="09">Awards &amp; languages</span>
+          <h2 class="heading heading--lg" id="awards-title">
+            Recognised work, and the languages I work in.
+          </h2>
+        </header>
+
+        <div class="ledger">
+
+          <div class="reveal">
+            <span class="ledger__column-label">Awards &amp; certifications</span>
+            <ul class="ledger__list" role="list">
+
+              <li class="ledger__row">
+                <span class="ledger__row-title">Gold Medal — ICCEX&nbsp;2025 (EYER, Final-Year Project)</span>
+                <span class="ledger__row-meta">2025</span>
+              </li>
+
+              <li class="ledger__row">
+                <span class="ledger__row-title">Mastering AI &amp; Practical Data Science for Professionals</span>
+                <span class="ledger__row-meta">May 2026</span>
+                <span class="ledger__row-detail">PENERAJU / Utechtium Sdn Bhd · in progress</span>
+              </li>
+
+              <li class="ledger__row">
+                <span class="ledger__row-title">Gold Medal — Dodgeball, Putrajaya National Games</span>
+                <span class="ledger__row-meta">2022 — 2025</span>
+              </li>
+
+              <li class="ledger__row">
+                <span class="ledger__row-title">Bronze Medal — Penang Rowing Indoor Championship</span>
+                <span class="ledger__row-meta">2022</span>
+              </li>
+
+              <li class="ledger__row">
+                <span class="ledger__row-title">FYP selected for MADANI Festival of Ideas&nbsp;2026</span>
+                <span class="ledger__row-meta">2026</span>
+                <span class="ledger__row-detail">Showcased at the UPM Vice-Chancellor&rsquo;s Annual Address&nbsp;2026</span>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="reveal" data-delay="1">
+            <span class="ledger__column-label">Languages</span>
+            <ul class="ledger__list" role="list">
+              <li class="ledger__row">
+                <span class="ledger__row-title">Bahasa Malaysia</span>
+                <span class="ledger__row-meta">Native</span>
+              </li>
+              <li class="ledger__row">
+                <span class="ledger__row-title">English</span>
+                <span class="ledger__row-meta">Full professional</span>
+              </li>
+              <li class="ledger__row">
+                <span class="ledger__row-title">Arabic</span>
+                <span class="ledger__row-meta">Intermediate</span>
+              </li>
+              <li class="ledger__row">
+                <span class="ledger__row-title">French</span>
+                <span class="ledger__row-meta">Basic</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         CONTACT
+         Closing statement + ledger of contact details.
+         ========================================================== -->
+    <section class="section section--rule" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="kicker kicker--numbered" data-index="10">Contact</span>
+        </header>
+
+        <div class="contact">
+
+          <div class="reveal">
+            <h2 class="contact__statement" id="contact-title">
+              Open to a conversation about Bank&nbsp;Islam&rsquo;s YLP.
+            </h2>
+            <p class="contact__lede">
+              Reach me directly. I respond promptly, in English or Bahasa
+              Malaysia, and I&rsquo;m happy to provide additional materials
+              or references on request.
+            </p>
+            <a class="button button--primary" href="mailto:uwaisalqoranee@gmail.com">
+              Send an email
+              <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="contact__list reveal" data-delay="1" role="list">
+
+            <li class="contact__row">
+              <span class="contact__row-label">Email</span>
+              <span class="contact__row-value">
+                <a href="mailto:uwaisalqoranee@gmail.com">uwaisalqoranee@gmail.com</a>
+              </span>
+            </li>
+
+            <li class="contact__row">
+              <span class="contact__row-label">Phone</span>
+              <span class="contact__row-value">
+                <a href="tel:+601169920344">+60 11-6992 0344</a>
+              </span>
+            </li>
+
+            <li class="contact__row">
+              <span class="contact__row-label">LinkedIn</span>
+              <span class="contact__row-value">
+                <a href="https://www.linkedin.com/in/ahmad-uwais-al-qoranee"
+                   target="_blank"
+                   rel="noopener noreferrer">linkedin.com/in/ahmad-uwais-al-qoranee</a>
+              </span>
+            </li>
+
+            <li class="contact__row">
+              <span class="contact__row-label">Location</span>
+              <span class="contact__row-value">Kuala Lumpur, Malaysia</span>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <div>
+          <p class="footer__title">
+            Ahmad Uwais Al Qoranee — engineer, officer, athlete.
+          </p>
+          <p class="footer__link" style="color:var(--color-text-muted)">
+            Built and maintained by hand. Static HTML, CSS, and JavaScript;
+            no frameworks, no trackers.
+          </p>
+        </div>
+
+        <div>
+          <span class="footer__label">Sections</span>
+          <ul class="footer__list" role="list">
+            <li><a class="footer__link" href="#profile">Profile</a></li>
+            <li><a class="footer__link" href="#experience">Work</a></li>
+            <li><a class="footer__link" href="#projects">Projects</a></li>
+            <li><a class="footer__link" href="#service">Service</a></li>
+            <li><a class="footer__link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="footer__label">Direct</span>
+          <ul class="footer__list" role="list">
+            <li><a class="footer__link" href="mailto:uwaisalqoranee@gmail.com">Email</a></li>
+            <li><a class="footer__link" href="tel:+601169920344">Phone</a></li>
+            <li>
+              <a class="footer__link"
+                 href="https://www.linkedin.com/in/ahmad-uwais-al-qoranee"
+                 target="_blank"
+                 rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li><a class="footer__link" href="assets/uwais-resume.pdf" download>Résumé (PDF)</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__meta">
+        <span>&copy; <span data-current-year>2026</span> Ahmad Uwais Al Qoranee. All rights reserved.</span>
+        <span>Last updated: 28 April 2026</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Defer-loaded for first paint priority -->
+  <script src="scripts/main.js" defer></script>
+
+</body>
+</html>

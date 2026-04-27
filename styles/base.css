@@ -1,0 +1,219 @@
+/* ---------------------------------------------------------------
+   base.css
+   Design tokens, typography, and base element styling.
+   Built around an editorial type system: a system-derived sans
+   for body and display, paired with a serif for kicker labels
+   and pull quotes.
+   --------------------------------------------------------------- */
+
+:root {
+  /* ---------- Color ---------- */
+  --color-bg:          #fafafa;
+  --color-surface:     #ffffff;
+  --color-text:        #1d1d1f;
+  --color-text-soft:   #4b4b4f;
+  --color-text-muted:  #6e6e73;
+  --color-rule:        #d8d8dc;
+  --color-rule-soft:   #ececef;
+  --color-accent:      #0a2540;     /* deep navy, used sparingly  */
+  --color-accent-soft: #1a3a5f;
+  --color-placeholder: #e7e5e0;     /* warm neutral for empty media */
+
+  /* ---------- Type ---------- */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+               "SF Pro Text", "Inter Tight", "Helvetica Neue",
+               "Segoe UI", Arial, sans-serif;
+  --font-serif: "New York", "Source Serif Pro", "Iowan Old Style",
+                "Apple Garamond", "Palatino", "Georgia", "Charter",
+                "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", "Menlo", "Consolas",
+               "Liberation Mono", monospace;
+
+  /* Modular type scale (1.2 ratio at small, 1.25 at larger) */
+  --step--1: clamp(0.83rem, 0.81rem + 0.10vw, 0.89rem);
+  --step-0:  clamp(1.00rem, 0.96rem + 0.20vw, 1.13rem);
+  --step-1:  clamp(1.20rem, 1.13rem + 0.36vw, 1.42rem);
+  --step-2:  clamp(1.44rem, 1.32rem + 0.60vw, 1.78rem);
+  --step-3:  clamp(1.73rem, 1.54rem + 0.95vw, 2.22rem);
+  --step-4:  clamp(2.07rem, 1.78rem + 1.45vw, 2.78rem);
+  --step-5:  clamp(2.49rem, 2.05rem + 2.20vw, 3.47rem);
+  --step-6:  clamp(2.99rem, 2.34rem + 3.25vw, 4.34rem);
+  --step-7:  clamp(3.58rem, 2.65rem + 4.65vw, 5.43rem);
+  --step-8:  clamp(4.30rem, 2.97rem + 6.65vw, 6.79rem);
+
+  /* ---------- Spacing ---------- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-s:   1rem;
+  --space-m:   1.5rem;
+  --space-l:   2rem;
+  --space-xl:  3rem;
+  --space-2xl: 5rem;
+  --space-3xl: 8rem;
+  --space-4xl: 12rem;
+
+  /* ---------- Layout ---------- */
+  --container:        72rem;   /* 1152px */
+  --container-prose:  44rem;   /* ~700px reading column */
+  --container-wide:   84rem;   /* 1344px for full bleed grids */
+  --gutter:           clamp(1.25rem, 4vw, 2.5rem);
+
+  /* ---------- Misc ---------- */
+  --radius-s: 4px;
+  --radius:   8px;
+  --radius-l: 12px;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04),
+                 0 8px 24px rgba(0, 0, 0, 0.06);
+
+  --easing: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration: 600ms;
+
+  --nav-height: 56px;
+}
+
+/* ---------------------------------------------------------------
+   Body & global
+   --------------------------------------------------------------- */
+
+html {
+  font-family: var(--font-sans);
+  font-size: 100%;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+body {
+  font-size: var(--step-0);
+  line-height: 1.65;
+  letter-spacing: -0.003em;
+  font-feature-settings: "kern", "liga", "calt";
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* ---------------------------------------------------------------
+   Typography primitives
+   --------------------------------------------------------------- */
+
+.display {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.display--xl   { font-size: var(--step-8); }
+.display--lg   { font-size: var(--step-7); }
+.display--md   { font-size: var(--step-6); }
+.display--sm   { font-size: var(--step-5); }
+
+.heading {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.12;
+}
+
+.heading--xl { font-size: var(--step-5); }
+.heading--lg { font-size: var(--step-4); }
+.heading--md { font-size: var(--step-3); }
+.heading--sm { font-size: var(--step-2); }
+
+.kicker {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--step--1);
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+}
+
+.kicker--numbered::before {
+  content: attr(data-index) "  —  ";
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.lede {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--step-2);
+  line-height: 1.4;
+  letter-spacing: -0.012em;
+  color: var(--color-text);
+}
+
+.prose {
+  font-size: var(--step-1);
+  line-height: 1.7;
+  color: var(--color-text-soft);
+  max-width: var(--container-prose);
+}
+
+.prose p + p {
+  margin-top: 1.1em;
+}
+
+.prose strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.pullquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--step-3);
+  line-height: 1.35;
+  color: var(--color-text);
+  letter-spacing: -0.005em;
+}
+
+/* Inline element niceties */
+a:not([class]) {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 200ms var(--easing);
+}
+
+a:not([class]):hover {
+  color: var(--color-accent-soft);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-rule);
+  margin: 0;
+}
+
+/* Utility: visually hide while keeping it accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
