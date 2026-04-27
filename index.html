@@ -69,18 +69,20 @@
       </button>
 
     </div>
-
-    <!-- Mobile drawer -->
-    <div class="nav__drawer" id="nav-drawer" data-nav-drawer>
-      <a class="nav__link" href="#profile">Profile</a>
-      <a class="nav__link" href="#experience">Work</a>
-      <a class="nav__link" href="#projects">Projects</a>
-      <a class="nav__link" href="#service">Service</a>
-      <a class="nav__link" href="#athletics">Athletics</a>
-      <a class="nav__link" href="#contact">Contact</a>
-      <a class="nav__cta" href="assets/uwais-resume.pdf" download>Download résumé</a>
-    </div>
   </header>
+
+  <!-- Mobile drawer (deliberately a top-level sibling of <header>, not
+       a child — keeps `position: fixed` reliable on iOS Safari and
+       prevents any parent stacking quirks from clipping the backdrop) -->
+  <div class="nav__drawer" id="nav-drawer" data-nav-drawer>
+    <a class="nav__link" href="#profile">Profile</a>
+    <a class="nav__link" href="#experience">Work</a>
+    <a class="nav__link" href="#projects">Projects</a>
+    <a class="nav__link" href="#service">Service</a>
+    <a class="nav__link" href="#athletics">Athletics</a>
+    <a class="nav__link" href="#contact">Contact</a>
+    <a class="nav__cta" href="assets/uwais-resume.pdf" download>Download résumé</a>
+  </div>
 
   <main id="main">
 
