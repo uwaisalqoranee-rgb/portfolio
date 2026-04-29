@@ -17,6 +17,22 @@
   align-items: flex-end;
   overflow: hidden;
   isolation: isolate;
+  background-color: var(--color-bg-deep);
+}
+
+/* Alternating tinted section — paired with default body bg below the
+   hero, this gives each major block its own visual lane so the
+   transitions between sections read clearly. */
+.section--tinted {
+  background-color: var(--color-bg-tint);
+}
+
+/* When two adjacent sections share a background, the rule line is the
+   only separator and should still read; when they differ, the colour
+   shift IS the separator and the rule becomes redundant clutter. We
+   suppress it on tinted blocks so the seam is just the colour change. */
+.section--tinted.section--rule {
+  border-top-color: transparent;
 }
 
 .hero__inner {

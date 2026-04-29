@@ -9,6 +9,8 @@
 :root {
   /* ---------- Color ---------- */
   --color-bg:          #fafafa;
+  --color-bg-tint:     #ededf0;     /* alternating section background */
+  --color-bg-deep:     #e2e2e7;     /* hero — the primary highlight   */
   --color-surface:     #ffffff;
   --color-text:        #1d1d1f;
   --color-text-soft:   #4b4b4f;

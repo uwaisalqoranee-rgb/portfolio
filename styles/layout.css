@@ -142,6 +142,31 @@
   color: var(--color-text);
 }
 
+/* Desktop nav: pill-shaped hover that lifts on cursor — Apple-style
+   "pop" without changing the resting visual weight of the bar. Scoped
+   to .nav__list so the mobile drawer's flat list isn't affected. */
+.nav__list .nav__link {
+  padding: 0.45em 0.95em;
+  border-radius: 999px;
+  transition: color 220ms var(--easing),
+              background-color 220ms var(--easing),
+              transform 220ms var(--easing),
+              box-shadow 260ms var(--easing);
+}
+
+.nav__list .nav__link:hover,
+.nav__list .nav__link:focus-visible {
+  color: var(--color-text);
+  background-color: rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+.nav__list .nav__link:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
 .nav__cta {
   display: none;
   font-size: 0.85rem;
